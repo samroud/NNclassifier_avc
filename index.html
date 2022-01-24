@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  </head>
+
+  <body>
+    <script src="sketch.js"></script>
+    <h1>Stroke Prediction Dataset</h1>
+    <p> <label >Gender: </label>
+      <select id="gender" >
+        <option value="0">female</option>
+        <option value="1">male</option>
+        <option value="2">other</option>
+      </select>
+    </p>
+    <p> <label >Hypertension: </label>
+      <select id="hypertension" >
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+    </p>
+    <p> <label >Heart disease: </label>
+      <select id="heart_disease" >
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+    </p>
+    <p> <label >Ever married: </label>
+      <select id="ever_married" >
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+    </p>
+    <p> <label >Job: </label>
+      <select id="work_type" >
+        <option value="Private">Private</option>
+        <option value="Self-employed">Self-employed</option>
+        <option value="Govt_job">Government Jobs</option>
+      </select>
+    </p>
+    <p> <label >Residence type: </label>
+      <select id="residence_type" >
+        <option value="Urban">Urban</option>
+        <option value="Rural">Rural</option>
+      </select>
+    </p>
+    <p>
+      <label>Age:</label>
+      <input type="range" id="age" value=" " min="0" max="120" oninput="this.nextElementSibling.value = this.value">
+      <output>50</output>
+    </p>
+    <p> <label >Smoking status: </label>
+      <select id="smoking_status" >
+      </select>
+    </p>
+    <p>
+      <label>Average glucose level:</label>
+      <input type="range" id="avg_glucose_level" value=" " min="50" max="250" oninput="this.nextElementSibling.value = this.value">
+      <output>75</output>
+    </p>
+
+    <p>
+      <button id="train">Train Model</button>
+      <button id="predict">Predict</button>
+    </p>
+
+
+    <p id= "result"></p>
+  </body>
+</html>
