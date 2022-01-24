@@ -90,7 +90,7 @@ function gotResults(error, result) {
     // }
     
     select("#result").html(
-      "Stroke prediction: "+result[0].label +" ("+parseInt(100*(result[0].confidence))+"%)"
+      "Stroke prediction: "+ parseInt(100*(result[1].confidence))+"%"
     );
   }
 }
