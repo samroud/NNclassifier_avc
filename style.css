@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 html, body {
-  margin-top: 50px;
-  margin-left: 100px;
+  margin-top: 25px;
+  margin-left: 50px;
   font-family: 'Space Mono', monospace;
+  color: #f0f;
+  font-size: 1.1em;
 }
 
 canvas {
   display: block;
 }
 
+select, button{
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1em;
+  padding: 5px;
+
+}
+
+button{
+  background-color: #f0f;
+}
