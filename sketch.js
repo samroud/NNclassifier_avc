@@ -88,10 +88,15 @@ function gotResults(error, result) {
     // } else {
     //   outcome = "bestehen!";
     // }
-    
-    select("#result").html(
-      "Stroke prediction: "+ parseInt(100*(result[1].confidence))+"%"
-    );
+    if(result[0].label == "No"){
+      select("#result").html(
+        "Stroke prediction: "+ parseInt(100*(result[1].confidence))+"%"
+      );
+    } else{
+      select("#result").html(
+        "Stroke prediction: "+ parseInt(100*(result[0].confidence))+"%"
+      );
+    }
   }
 }
 
